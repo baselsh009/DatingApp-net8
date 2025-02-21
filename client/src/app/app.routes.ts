@@ -5,7 +5,7 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { authGuard } from './_guards/auth.guard';
-import { TestErrorsComponent } from './errros/test-errors/test-errors.component';
+import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 
@@ -17,7 +17,7 @@ export const routes: Routes = [
         canActivate: [authGuard],
         children: [
             {path: 'members', component: MemberListComponent},
-            {path: 'member/:id', component: MemberDetailComponent},
+            {path: 'member/:username', component: MemberDetailComponent},
             {path: 'lists', component: ListsComponent},
             {path: 'messages', component: MessagesComponent},
         ]
