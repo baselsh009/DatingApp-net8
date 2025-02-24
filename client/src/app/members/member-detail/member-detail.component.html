@@ -50,10 +50,11 @@
                     @if(photoTab.active) {
                         <gallery
                             [items]="images"
+                            [itemAutosize]="true"
                             class="gallery"
                         ></gallery>
                     }
-                    
+
                 </tab>
                 <tab heading="Messages">
                     <p>Messages will go here</p>
