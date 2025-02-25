@@ -23,11 +23,11 @@ export class RegisterComponent implements OnInit{
   validationErrors: string[] | undefined;
 
   ngOnInit(): void {
-    this.intializeForm();
+    this.initializeForm();
     this.maxDate.setFullYear(this.maxDate.getFullYear() - 18)
   }
 
-  intializeForm() {
+  initializeForm() {
     this.registerForm = this.fb.group({
       gender: ['male'],
       username: ['', Validators.required],
