@@ -52,7 +52,7 @@
                         class="btn btn-primary"
                         name="orderBy"
                         (click)="loadMembers()"
-                        btnRadio="lastActve"
+                        btnRadio="lastActive"
                         [(ngModel)]="memberService.userParams().orderBy"
                     >Last Active</button>
                     <button
@@ -82,7 +82,7 @@
         <pagination
             [boundaryLinks]="true"
             [totalItems]="memberService.paginatedResult()?.pagination!.totalItems"
-            [itemsPerPage]="memberService.paginatedResult()?.pagination!.itemsperPage"
+            [itemsPerPage]="memberService.paginatedResult()?.pagination!.itemsPerPage"
             (pageChanged)="pageChanged($event)"
             [(ngModel)]="memberService.paginatedResult()?.pagination!.currentPage"
             [maxSize]="10"
